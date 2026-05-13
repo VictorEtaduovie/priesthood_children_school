@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>School Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top main-nav py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#home" aria-label="School home">
+        <span class="brand-mark">
+          <i class="bi bi-mortarboard-fill"></i>
+        </span>
+        <span class="brand-text">School Name</span>
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
+          <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header id="home" class="hero-section">
+    <div id="heroBgCarousel" class="carousel slide carousel-fade hero-bg-carousel" data-bs-ride="carousel" data-bs-interval="4500">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroBgCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroBgCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#heroBgCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+      <div class="carousel-inner h-100">
+        <div class="carousel-item active h-100">
+          <div class="hero-slide" style="background-image: linear-gradient(180deg, rgba(18, 18, 42, 0.30), rgba(18, 18, 42, 0.72)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=80');"></div>
+        </div>
+        <div class="carousel-item h-100">
+          <div class="hero-slide" style="background-image: linear-gradient(180deg, rgba(18, 18, 42, 0.30), rgba(18, 18, 42, 0.72)), url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=80');"></div>
+        </div>
+        <div class="carousel-item h-100">
+          <div class="hero-slide" style="background-image: linear-gradient(180deg, rgba(18, 18, 42, 0.30), rgba(18, 18, 42, 0.72)), url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1600&q=80');"></div>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroBgCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroBgCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div class="hero-overlay-layer"></div>
+
+    <div class="container hero-content-wrap">
+      <div class="row align-items-center min-vh-100 py-5 g-5">
+        <div class="col-lg-7 hero-copy">
+          <div class="hero-badge">
+            <i class="bi bi-stars"></i>
+            <span>Excellence in learning and character</span>
+          </div>
+
+          <h1>Building bright futures through quality education.</h1>
+
+          <p class="hero-text">
+            Welcome to School Name, where learning is guided by discipline, care, and a strong commitment to helping every child grow with confidence.
+          </p>
+
+          <div class="hero-actions d-flex flex-column flex-sm-row gap-3 mt-4">
+            <a href="#admissions" class="btn btn-primary premium-btn">Admission Details</a>
+            <a href="#about" class="btn btn-outline-light premium-btn secondary-btn">Learn More</a>
+          </div>
+
+          <div class="hero-mini-row d-flex flex-wrap gap-3 mt-4">
+            <span class="hero-mini-pill"><i class="bi bi-shield-check"></i> Safe environment</span>
+            <span class="hero-mini-pill"><i class="bi bi-people-fill"></i> Qualified teachers</span>
+            <span class="hero-mini-pill"><i class="bi bi-mortarboard-fill"></i> Strong academic culture</span>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="hero-card">
+            <div class="hero-card-icon">
+              <i class="bi bi-building"></i>
+            </div>
+            <div>
+              <h5>Safe, modern, and inspiring campus life.</h5>
+              <p>Designed to make parents feel confident and students feel ready to learn.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="intro-section" id="about">
+    <div class="container">
+      <div class="row align-items-center g-4 g-lg-5">
+        <div class="col-lg-7">
+          <div class="section-kicker">Welcome to Priesthood Children School</div>
+          <h2 class="intro-title">A nurturing place where every child is guided to learn, grow, and succeed.</h2>
+          <p class="intro-text">
+            Priesthood Children School, Abule-Egba, provides a warm and disciplined learning environment where pupils are supported with quality teaching, character building, and the confidence to do their best every day.
+          </p>
+          <div class="intro-actions">
+            <a href="#admissions" class="btn btn-primary premium-btn">Admission Details</a>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="intro-card">
+            <div class="intro-card-top">
+              <span class="intro-pill"><i class="bi bi-award"></i> Toward perfection</span>
+            </div>
+            <p class="intro-card-text mb-0">
+              We combine strong academics, good values, and a friendly school atmosphere to help children build a solid foundation for the future.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================
+     LATEST NEWS SECTION
+========================= -->
+<section class="news-section" id="news">
+  <div class="container">
+    <div class="section-heading text-center">
+      <span class="section-tag">Latest Updates</span>
+      <h2 class="section-title">News & Announcements</h2>
+      <p class="section-subtitle">
+        Stay updated with the latest happenings, events, and activities in our school community.
+      </p>
+    </div>
+
+    <div class="row g-4 mt-2">
+      <!-- News Card -->
+      <div class="col-lg-4 col-md-6">
+        <article class="news-card">
+          <div class="news-image">
+            <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1200&q=80" alt="School event">
+          </div>
+
+          <div class="news-content">
+            <span class="news-date">
+              <i class="bi bi-calendar-event"></i>
+              March 18, 2026
+            </span>
+
+            <h3 class="news-title">
+              Inter-House Sports Competition Holds Successfully
+            </h3>
+
+            <p class="news-text">
+              Pupils participated actively in exciting sporting activities while parents and staff cheered them on.
+            </p>
+
+            <a href="#" class="news-link">
+              Read More
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <!-- News Card -->
+      <div class="col-lg-4 col-md-6">
+        <article class="news-card">
+          <div class="news-image">
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80" alt="Classroom">
+          </div>
+
+          <div class="news-content">
+            <span class="news-date">
+              <i class="bi bi-calendar-event"></i>
+              March 10, 2026
+            </span>
+
+            <h3 class="news-title">
+              New Academic Session Admission Ongoing
+            </h3>
+
+            <p class="news-text">
+              Admission is currently open for qualified pupils into various classes for the new session.
+            </p>
+
+            <a href="#" class="news-link">
+              Read More
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <!-- News Card -->
+      <div class="col-lg-4 col-md-6">
+        <article class="news-card">
+          <div class="news-image">
+            <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80" alt="Library">
+          </div>
+
+          <div class="news-content">
+            <span class="news-date">
+              <i class="bi bi-calendar-event"></i>
+              February 27, 2026
+            </span>
+
+            <h3 class="news-title">
+              Reading Culture Initiative Introduced
+            </h3>
+
+            <p class="news-text">
+              The school has launched a weekly reading initiative to improve literacy and communication skills.
+            </p>
+
+            <a href="#" class="news-link">
+              Read More
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     GALLERY SECTION
+========================= -->
+<section class="gallery-section" id="gallery">
+  <div class="container">
+    <div class="section-heading text-center">
+      <span class="section-tag">School Moments</span>
+      <h2 class="section-title">Gallery Preview</h2>
+      <p class="section-subtitle">
+        A glimpse into life, learning, and memorable moments within our school environment.
+      </p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item large">
+        <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1200&q=80" alt="">
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80" alt="">
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1200&q=80" alt="">
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1200&q=80" alt="">
+      </div>
+
+      <div class="gallery-item wide">
+        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     CONTACT SECTION
+========================= -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="contact-wrapper">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-6">
+          <span class="section-tag">Contact Us</span>
+          <h2 class="section-title contact-title">
+            We would love to hear from you.
+          </h2>
+
+          <p class="contact-text">
+            Reach out to us for admission enquiries, school information, or any assistance regarding our academic programs.
+          </p>
+
+          <div class="contact-list">
+            <div class="contact-item">
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>Abule Egba, Lagos, Nigeria</span>
+            </div>
+
+            <div class="contact-item">
+              <i class="bi bi-telephone-fill"></i>
+              <span>+234 XXX XXX XXXX</span>
+            </div>
+
+            <div class="contact-item">
+              <i class="bi bi-envelope-fill"></i>
+              <span>info@schoolname.com</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <form class="contact-form">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input type="text" class="form-control custom-input" placeholder="Full Name">
+              </div>
+
+              <div class="col-md-6">
+                <input type="email" class="form-control custom-input" placeholder="Email Address">
+              </div>
+
+              <div class="col-12">
+                <input type="text" class="form-control custom-input" placeholder="Subject">
+              </div>
+
+              <div class="col-12">
+                <textarea rows="5" class="form-control custom-input" placeholder="Your Message"></textarea>
+              </div>
+
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary premium-btn">
+                  Send Message
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     FOOTER SECTION
+========================= -->
+<footer class="main-footer">
+  <div class="container">
+    <div class="footer-content">
+      <div>
+        <h4 class="footer-logo">School Name</h4>
+        <p class="footer-text">
+          Building excellent minds and strong character through quality education.
+        </p>
+      </div>
+
+      <div class="footer-socials">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-twitter-x"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        © 2026 School Name. All Rights Reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
