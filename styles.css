@@ -81,7 +81,7 @@ body {
   bottom: 0.35rem;
   height: 2px;
   border-radius: 999px;
-  background: linear-gradient(90deg, var(--minor-1), var(--minor-2));
+  background: linear-gradient(90deg, var(--minor-1));
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.25s ease;
@@ -270,7 +270,7 @@ body {
   place-items: center;
   flex: 0 0 auto;
   color: #fff;
-  background: linear-gradient(135deg, var(--minor-1), var(--minor-2));
+  background: linear-gradient(135deg, var(--minor-1));
   box-shadow: 0 12px 22px rgba(239, 122, 83, 0.18);
   font-size: 1.2rem;
 }
@@ -576,6 +576,43 @@ body {
   transform: scale(1.08);
 }
 
+/* =========================================================
+   GALLERY FILTER SECTION (FIX ALIGNMENT)
+========================================================= */
+
+.gallery-filter-section {
+  padding: 2.5rem 0 1.5rem;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.filter-btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(40, 36, 106, 0.15);
+  background: #fff;
+  color: var(--major-2);
+  font-weight: 600;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, var(--major-1), var(--major-2));
+  color: #fff;
+  border: none;
+}
+
 /* ========================================
    CONTACT SECTION
 ======================================== */
@@ -760,7 +797,7 @@ body {
       rgba(17, 24, 39, 0.65),
       rgba(17, 24, 39, 0.65)
     ),
-    url("https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1600&q=80")
+    url("https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80")
     center/cover no-repeat;
 }
 
@@ -801,7 +838,7 @@ body {
 .about-hero-title {
   margin: 0 auto;
 
-  max-width: 12ch;
+  max-width: 15ch;
 
   font-size:
     clamp(2.7rem, 5vw, 5.5rem);
@@ -2035,5 +2072,358 @@ body {
 
   .event-card {
     flex-direction: column;
+  }
+}
+
+/* =========================================================
+   GALLERY PAGE STYLES
+========================================================= */
+
+/* =========================================================
+   GALLERY HERO SECTION
+========================================================= */
+.gallery-hero-section {
+  position: relative;
+
+  padding: 8rem 0;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      rgba(17, 24, 39, 0.70),
+      rgba(17, 24, 39, 0.70)
+    ),
+    url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1600&q=80")
+    center/cover no-repeat;
+}
+
+.gallery-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(98, 50, 124, 0.35),
+      rgba(40, 36, 106, 0.45)
+    );
+}
+
+/* =========================================================
+   FILTER BUTTONS
+========================================================= */
+.gallery-filter-section {
+  padding: 3rem 0;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.filter-btn {
+  padding: 0.7rem 1.4rem;
+
+  border-radius: 999px;
+
+  border: 1px solid rgba(40, 36, 106, 0.15);
+
+  background: #fff;
+
+  font-weight: 700;
+
+  color: var(--major-2);
+
+  transition: 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: linear-gradient(135deg, var(--major-1), var(--major-2));
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* =========================================================
+   GALLERY GRID
+========================================================= */
+.gallery-grid-section {
+  padding: 2rem 0 7rem;
+}
+
+.gallery-card {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: var(--radius-xl);
+
+  box-shadow: var(--shadow);
+
+  cursor: pointer;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 280px;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 1.2rem;
+
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.65),
+    transparent
+  );
+
+  opacity: 0;
+
+  transition: 0.3s ease;
+}
+
+.gallery-card:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-overlay h5 {
+  color: #fff;
+
+  font-weight: 800;
+
+  margin: 0;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 575.98px) {
+  .gallery-card img {
+    height: 220px;
+  }
+
+  .filter-buttons {
+    gap: 0.6rem;
+  }
+}
+
+/* =========================================================
+   CONTACT PAGE STYLES
+========================================================= */
+
+/* =========================================================
+   CONTACT HERO SECTION
+========================================================= */
+.contact-hero-section {
+  position: relative;
+
+  padding: 8rem 0;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      rgba(17, 24, 39, 0.70),
+      rgba(17, 24, 39, 0.70)
+    ),
+    url("https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=1200&q=80")
+    center/cover no-repeat;
+}
+
+.contact-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(98, 50, 124, 0.35),
+      rgba(40, 36, 106, 0.45)
+    );
+}
+
+/* =========================================================
+   CONTACT INFO SECTION
+========================================================= */
+.contact-info-section {
+  padding: 6rem 0;
+}
+
+.contact-info-card {
+  height: 100%;
+
+  padding: 2rem;
+
+  text-align: center;
+
+  border-radius: var(--radius-lg);
+
+  background: rgba(255, 255, 255, 0.95);
+
+  box-shadow: var(--shadow-soft);
+
+  border: 1px solid rgba(40, 36, 106, 0.08);
+
+  transition: 0.3s ease;
+}
+
+.contact-info-card:hover {
+  transform: translateY(-6px);
+}
+
+.contact-icon {
+  width: 70px;
+  height: 70px;
+
+  margin: 0 auto 1.2rem;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 22px;
+
+  background: linear-gradient(135deg, var(--minor-1));
+
+  color: #fff;
+
+  font-size: 1.6rem;
+}
+
+.contact-info-card h4 {
+  font-weight: 800;
+
+  color: var(--major-2);
+
+  margin-bottom: 0.8rem;
+}
+
+.contact-info-card p {
+  color: var(--muted);
+
+  line-height: 1.8;
+
+  margin: 0;
+}
+
+/* =========================================================
+   CONTACT FORM SECTION
+========================================================= */
+.contact-form-section {
+  padding: 6rem 0;
+}
+
+.contact-form-card {
+  padding: 2.5rem;
+
+  border-radius: var(--radius-xl);
+
+  background: #fff;
+
+  box-shadow: var(--shadow);
+
+  border: 1px solid rgba(40, 36, 106, 0.08);
+}
+
+.contact-form-card h2 {
+  font-weight: 900;
+
+  color: var(--major-2);
+
+  margin-bottom: 0.5rem;
+}
+
+.contact-form-card p {
+  color: var(--muted);
+
+  margin-bottom: 2rem;
+}
+
+.contact-form-card .form-control {
+  padding: 0.9rem 1rem;
+
+  border-radius: 14px;
+
+  border: 1px solid rgba(40, 36, 106, 0.15);
+}
+
+.contact-form-card .form-control:focus {
+  box-shadow: none;
+
+  border-color: var(--major-1);
+}
+
+.contact-btn {
+  width: 100%;
+
+  padding: 1rem;
+
+  border: none;
+
+  border-radius: 999px;
+
+  font-weight: 800;
+
+  color: #fff;
+
+  background: linear-gradient(135deg, var(--major-1), var(--major-2));
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+
+  transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+  transform: translateY(-4px);
+}
+
+/* =========================================================
+   MAP SECTION
+========================================================= */
+.map-wrapper {
+  border-radius: var(--radius-xl);
+
+  overflow: hidden;
+
+  box-shadow: var(--shadow);
+}
+
+.map-wrapper iframe {
+  width: 100%;
+
+  height: 520px;
+
+  border: 0;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 575.98px) {
+  .contact-form-card {
+    padding: 1.5rem;
+  }
+
+  .map-wrapper iframe {
+    height: 350px;
   }
 }
